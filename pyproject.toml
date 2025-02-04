@@ -1,0 +1,12 @@
+[project]
+name = "prefect-perso"
+version = "0.1.0"
+description = "Simple template for Prefect as Windows task scheduler"
+readme = "README.md"
+authors = [
+    { name = "DSestu", email = "david.sestu@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "prefect==3.1.15",
+]
