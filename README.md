@@ -10,6 +10,8 @@ For this reason, we use [Prefect](https://docs.prefect.io/) to schedule tasks.
 
 ## Setup
 
+0. Clone, remove `.git`, and `git init`:
+
 1. Launch `init.bat`
 
 This will:
