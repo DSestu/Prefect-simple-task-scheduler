@@ -8,4 +8,6 @@ call .venv\Scripts\activate.bat
 
 uv sync
 
+uv pip install -e .
+
 pause
