@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd "$(dirname "$0")"
 
 curl -LsSf https://astral.sh/uv/install.sh | sh
