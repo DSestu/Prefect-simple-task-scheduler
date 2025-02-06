@@ -1,4 +1,4 @@
-# Prefect - Windows task scheduler alternative
+# Prefect - Simple task scheduler alternative
 
 This project is aimed at providing a simple template for running croned tasks on Windows.
 
@@ -10,9 +10,11 @@ For this reason, we use [Prefect](https://docs.prefect.io/) to schedule tasks.
 
 ## Setup
 
+**Depending of your setup, you may want to either run `.bat`/`.sh` files**
+
 0. Clone, remove `.git`, and `git init`:
 
-1. Launch `init.bat`
+1. Launch `init`
 
 This will:
 
@@ -22,8 +24,10 @@ This will:
 
 * Update the packages in the virtual environment
 
-2. Launch `create_scheduled_task.bat`
+1. Launch `create_scheduled_task`
 
+> For Windows
+>
 This will create a Windows scheduled task responsible of running the Prefect server and worker in background.
 
 **Unfortunately**, you still have to do a one-time configuration of the task:
@@ -39,6 +43,10 @@ This will create a Windows scheduled task responsible of running the Prefect ser
 **The Prefect server and worker will now run in the background at user login.**
 
 **You can launch it manually by right-clicking on the task and selecting `Run`.**
+
+> For Linux
+
+**TBD**
 
 > **The Prefect dashboard will be available at `http://localhost:4200`**
 
@@ -60,7 +68,7 @@ If, for whatever reason the server is not running well *(e.g. hardcore dependenc
 
 1. Go to the task scheduler, and end the Prefect task
 
-2. On a command line, run `taskkill /f /im python.exe` *(brutal killing of all python processes)*
+2. On a command line, run `taskkill /f /im python.exe` *(brutal killing of all python processes)* / `pkill python` on Linux
 
 3. Start the Prefect task again
 
@@ -68,7 +76,7 @@ If, for whatever reason the server is not running well *(e.g. hardcore dependenc
 
 1. Go to the task scheduler, and end the Prefect task
 
-2. On a command line, run `taskkill /f /im python.exe` *(brutal killing of all python processes)*
+2. On a command line, run `taskkill /f /im python.exe` *(brutal killing of all python processes)* / `pkill python` on Linux
 
 3. Delete the Prefect task
 
@@ -80,7 +88,7 @@ If, for whatever reason the server is not running well *(e.g. hardcore dependenc
 
 1. End the Prefect task
 
-2. On a command line, run `taskkill /f /im python.exe` *(brutal killing of all python processes)*
+2. On a command line, run `taskkill /f /im python.exe` *(brutal killing of all python processes)* / `pkill python` on Linux
 
 3. Launch the Prefect server manually by running `start_prefect.bat`
 
