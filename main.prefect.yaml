@@ -43,7 +43,7 @@ deployments:
   tags: []
   description:
   schedule: {}
-  entrypoint: src\prefect_perso\flows\flow_example.py:flow2
+  entrypoint: src/prefect_perso/flows/flow_example.py:flow2
   parameters: {}
   work_pool:
     name: WorkPool
