@@ -10,6 +10,8 @@ wheels/
 .venv
 
 prefect.db
+prefect.db-shm
+prefect.db-wal
 server.pid
 memo_store.toml
 storage/
