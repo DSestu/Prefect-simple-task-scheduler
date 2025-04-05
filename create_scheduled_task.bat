@@ -13,13 +13,13 @@ if %errorlevel% == 0 (
 
 set HOME_DIR=%~dp0
 
-schtasks /create /tn Prefect /tr "cmd /k %HOME_DIR%\start_prefect.bat" /sc onlogon /ru "%username%"  /f
+schtasks /create /tn Prefect /tr "cmd /c %HOME_DIR%start_prefect.vbs" /sc onlogon /ru "%username%"  /f
 
 @echo off
 color 0A
-echo ***************************************
-echo On task scheduler, go to the "Prefect" task and edit: 
-echo Settings: Uncheck "Stop the task if it runs longer than"
-echo If you don't want a cmd window to pop: General : Run wetheer the user is logged on or not
-echo ***************************************
-pause
+REM echo ***************************************
+REM echo On task scheduler, go to the "Prefect" task and edit: 
+REM echo Settings: Uncheck "Stop the task if it runs longer than"
+REM echo If you don't want a cmd window to pop: General : Run wetheer the user is logged on or not
+REM echo ***************************************
+REM pause

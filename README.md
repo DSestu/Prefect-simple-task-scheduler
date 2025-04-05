@@ -27,7 +27,7 @@ This will:
 1. Launch `create_scheduled_task`
 
 > For Windows
->
+
 This will create a Windows scheduled task responsible of running the Prefect server and worker in background.
 
 **Unfortunately**, you still have to do a one-time configuration of the task:
@@ -35,8 +35,6 @@ This will create a Windows scheduled task responsible of running the Prefect ser
 * Go to the task scheduler
 
 * Edit the `Prefect` task
-
-* In general: set to `Run whether user is logged on or not`
 
 * In settings: Uncheck `Stop the task if it runs longer than`
 
