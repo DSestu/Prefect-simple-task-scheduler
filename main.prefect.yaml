@@ -55,3 +55,18 @@ deployments:
     timezone: UTC
     day_or: true
     active: true
+
+- name: inactive_browser
+  version: 1.0.0
+  tags: []
+  description: The point of this flow is to pop an inactive browser so we can manually
+    interact with website while retaining user data (e.g. Amazon logging)
+  schedule: {}
+  entrypoint: src\prefect_perso\flows\inactive_browser.py:main
+  parameters: {}
+  work_pool:
+    name: WorkPool
+    work_queue_name:
+    job_variables: {}
+  concurrency_limit:
+  schedules: []

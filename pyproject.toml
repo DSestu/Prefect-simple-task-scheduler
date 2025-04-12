@@ -8,7 +8,9 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "httpx>=0.28.1",
     "prefect==3.1.15",
+    "pydoll-python>=1.7.0",
 ]
 
 [tool.setuptools]
